@@ -63,11 +63,11 @@ Redmine плагин. Подсвечивающий задачи, которые 
 менять время модификации:
 
 
-  def mark_issue_update(issue)
-    issue.changed_at = Time.now
-  end
+    def mark_issue_update(issue)
+      issue.changed_at = Time.now
+    end
 
-  Issue.after_save = mark_issue_update self
-  ....after_create = mark_issue_update ...
+    Issue.after_save = mark_issue_update self
+    ....after_create = mark_issue_update ...
 
 
